@@ -4,6 +4,7 @@
   "private": true,
   "main": "app.js",
   "scripts": {
+    "lint": "jshint **.js",
     "start": "node ./bin/www",
     "dev": "nodemon app.js"
   },
@@ -20,6 +21,8 @@
     "jquery": "3.2.1"
   },
   "devDependencies": {
+    "jshint": "latest",
+    "browserify": "latest",
     "nodemon": "1.12.0"
   }
 }
