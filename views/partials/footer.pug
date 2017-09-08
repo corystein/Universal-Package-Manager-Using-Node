@@ -1,0 +1,14 @@
+.container-fluid
+	.row
+		.footer-bottom
+			p.pull-left
+			//hr(style='margin: 30px 0 10px 0;')
+			p &copy;&nbsp;
+				a(href='/') #{env.app.footer.company} 
+				|  #{env.app.footer.year}
+
+script(src='/jquery/jquery.min.js')
+script(src='/bootstrap/js/bootstrap.min.js')
+script(src='/js/sidebar_menu.js')
+
+block footer

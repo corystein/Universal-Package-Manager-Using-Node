@@ -1,28 +1,29 @@
 {
-  "name": "universal-package-manager-using-node",
+  "name": "universal-package-manager",
   "version": "0.0.0",
   "private": true,
   "main": "app.js",
   "scripts": {
     "lint": "jshint **.js",
     "start": "node ./bin/www",
-    "dev": "nodemon app.js"
+    "dev": "nodemon --inspect app.js"
   },
   "dependencies": {
-    "body-parser": "~1.17.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.3",
-    "express": "~4.15.2",
+    "body-parser": "1.17.2",
+    "cookie-parser": "1.4.3",
+    "debug": "3.0.1",
+    "express": "4.15.4",
     "morgan": "~1.8.1",
-    "pug": "~2.0.0-beta11",
-    "serve-favicon": "~2.4.2",
+    "pug": "2.0.0-rc.4",
+    "serve-favicon": "2.4.3",
     "bootstrap3": "3.3.5",
-    "fontawesome": "4.7.2",
-    "jquery": "3.2.1"
+    "jquery-1x": "1.12.1",
+    "font-awesome": "4.7.0"
   },
   "devDependencies": {
     "jshint": "latest",
     "browserify": "latest",
-    "nodemon": "1.12.0"
+    "mocha": "latest",
+    "nodemon": "latest"
   }
 }

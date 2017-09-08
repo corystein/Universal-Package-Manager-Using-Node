@@ -4,21 +4,19 @@
 
 An Open Source universal package manager application written in [NodeJS](https://www.nodejs.org/)
 
+## Goal
+The overall goal of this project is to provide the following services.  The web application should provide an easy interface to create and manage the various repositories.  Additionally, the appilication should include an API.
+- Docker registry
+- NPM private repositories
+- Bower private repositories
+- NuGet repositories
+
 ## Installation
-
-Install via npm.
-
-```bash
-$ npm install github
-```
-
-or
 
 Install via git clone
 
 ```bash
-$ git clone https://github.com/mikedeboer/node-github.git
-$ cd node-github
+$ git clone https://github.com/corystein/Universal-Package-Manager-Using-Node
 $ npm install
 ```
 

@@ -1,0 +1,53 @@
+div.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+    div.container-fluid
+        div.navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+        div.navbar-brand
+            a#menu-toggle.glyphicon.glyphicon-align-justify.btn-menu.toggle(href='#')
+                i.fa.fa-bars
+            //a(href='#') Project name
+        div.collapse.navbar-collapse
+            ul.nav.navbar-nav
+                li(class=(title === 'Home' ? 'active' : ''))
+                    a(href='/') Home
+                li(class=(title === 'About' ? 'active' : ''))
+                    a(href='/about') About
+                //li(class=(title === 'Contact' ? 'active' : ''))
+                //    a(href='/contact') Contact
+            ul.nav.navbar-nav.pull-right
+                li(class=(title === 'Login' ? 'active' : ''))
+                    a(href='/login') Login
+                li.divider
+                li(class=(title === 'Help' ? 'active' : ''))
+                    //a(href='/help') Help
+                    a(href='/help' class="dropdown-toggle" data-toggle="dropdown") Help
+                        ul.dropdown-menu(role='menu', aria-labelledby='dropdownMenu')
+                            li(class=(title === 'UserGuide')).pull-left
+                                a(href='/userguide') User Guide
+                            li(class=(title === 'RestAPI'))
+                                a(href='/restapi') REST API
+                            li(class=(title === 'GeneralInformation'))
+                                a(href='/info') General Information
+        // Sidebar
+        div#sidebar-wrapper
+            nav#spy
+                ul.sidebar-nav.nav
+                    li.sidebar-brand
+                        a(href='#home')
+                            span.fa.fa-home.solo Home
+                    li
+                        a(href='#anch1')
+                            span.fa.fa-anchor.solo Anchor 1
+                    li
+                        a(href='#anch2')
+                            span.fa.fa-anchor.solo Anchor 2
+                    li
+                        a(href='#anch3')
+                            span.fa.fa-anchor.solo Anchor 3
+                    li
+                        a(href='#anch4')
+                            span.fa.fa-anchor.solo Anchor 4
