@@ -1,11 +1,11 @@
 div.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
     div.container-fluid
         div.navbar-header
-            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-                span.sr-only Toggle navigation
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
+            //button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            //    span.sr-only Toggle navigation
+            //    span.icon-bar
+            //    span.icon-bar
+            //    span.icon-bar
         div.navbar-brand
             a#menu-toggle.glyphicon.glyphicon-align-justify.btn-menu.toggle(href='#')
                 i.fa.fa-bars
@@ -16,8 +16,6 @@ div.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
                     a(href='/') Home
                 li(class=(title === 'About' ? 'active' : ''))
                     a(href='/about') About
-                //li(class=(title === 'Contact' ? 'active' : ''))
-                //    a(href='/contact') Contact
             ul.nav.navbar-nav.pull-right
                 li(class=(title === 'Login' ? 'active' : ''))
                     a(href='/login') Login
@@ -25,11 +23,11 @@ div.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
                 li(class=(title === 'Help' ? 'active' : ''))
                     //a(href='/help') Help
                     a(href='/help' class="dropdown-toggle" data-toggle="dropdown") Help
-                        ul.dropdown-menu(role='menu', aria-labelledby='dropdownMenu')
+                        ul.dropdown-menu.dropdown-menu-right(role='menu', aria-labelledby='dropdownMenu')
                             li(class=(title === 'UserGuide')).pull-left
                                 a(href='/userguide') User Guide
                             li(class=(title === 'RestAPI'))
-                                a(href='/restapi') REST API
+                                a(href='/help/restapi') REST API
                             li(class=(title === 'GeneralInformation'))
                                 a(href='/info') General Information
         // Sidebar
@@ -40,14 +38,12 @@ div.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
                         a(href='#home')
                             span.fa.fa-home.solo Home
                     li
-                        a(href='#anch1')
-                            span.fa.fa-anchor.solo Anchor 1
+                        a(href='#artifacts')
+                            span.fa.fa-anchor.solo Artifacts
                     li
-                        a(href='#anch2')
-                            span.fa.fa-anchor.solo Anchor 2
+                        a(href='#builds')
+                            span.fa.fa-anchor.solo Builds
                     li
-                        a(href='#anch3')
-                            span.fa.fa-anchor.solo Anchor 3
-                    li
-                        a(href='#anch4')
-                            span.fa.fa-anchor.solo Anchor 4
+                        a(href='#admin')
+                            span.fa.fa-anchor.solo Admin
+

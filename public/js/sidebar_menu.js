@@ -1,9 +1,9 @@
     /*Menu-toggle*/
     $("#menu-toggle").click(function (e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("active");
+        //e.preventDefault();
+        //$("#wrapper").toggleClass("active");
 
-        console.log(JSON.stringify($("#sidebar-wrapper")));
+        //console.log(JSON.stringify($("#sidebar-wrapper")));
 
         var x = document.getElementById("sidebar-wrapper");
 

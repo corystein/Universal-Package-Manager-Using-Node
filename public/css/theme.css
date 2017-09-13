@@ -13,6 +13,11 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
     text-decoration: none;
+    /* margin: 15px; */
+}
+
+body > .container {
+    margin: 15px;
 }
 
 .navbar {
@@ -36,17 +41,14 @@ body {
     background-color: #4d90fe;
 }
 
-.vertical-divider {
-    background: #e0e0e0;
-    width: 1px;
-    content: "";
-    display:block;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    right: 0;
-    min-height: 70px;
+.navbar .divider-vertical {
+    height: 45px;                   /* any height */
+    border-left: 1px solid gray;     /* right or left is the same */
+    float: left;                     /* so BS grid doesn't break */
+    opacity: 0.5;                    /* optional */
+    margin: 0 15px;                  /* optional */
 }
+
 
 .footer-bottom {
     background-color: #222;

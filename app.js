@@ -9,13 +9,16 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
-
 var app = express();
 
 // get config handle
 var appConfig = require('./config/appConfig.json');
+app.locals.env = appConfig;
+
+var index = require('./routes/index');
+var users = require('./routes/users');
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,12 +33,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(__dirname + '/public'));
 app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap3/dist/'));
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
-app.use('/fontawesome', express.static(__dirname + '/node_modules/fontawesome/'));
+app.use('/fontawesome', express.static(__dirname + '/node_modules/font-awesome/'));
 
 app.use('/', index);
 app.use('/users', users);
+
+// Otherwise this was a really bad error we didn't expect! Shoot eh
+if (app.get('env') === 'development') {
+  /* Development Error Handler - Prints stack trace */
+  //app.use(errorHandlers.developmentErrors);
+  app.locals.pretty = true;
+}
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -59,8 +71,9 @@ module.exports = app;
 
 
 // Set config into environment varibles
-app.locals.env = appConfig;
-console.log(app.locals.env);
+//app.locals.env = appConfig;
+//module.exports = appConfig;
+//console.log(app.locals.env);
 //console.log("Host [{0}]", app.locals.env.server.host);
 //console.log("Port [{0}]", app.locals.env.server.port);
 //console.log("Footer Company: [{0}]", app.locals.env.app.footer.company);

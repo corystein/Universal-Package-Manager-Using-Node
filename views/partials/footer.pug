@@ -3,12 +3,11 @@
 		.footer-bottom
 			p.pull-left
 			//hr(style='margin: 30px 0 10px 0;')
-			p &copy;&nbsp;
-				a(href='/') #{env.app.footer.company} 
-				|  #{env.app.footer.year}
-
-script(src='/jquery/jquery.min.js')
+			p 
+				span #{env.app.app_name} • Version #{env.app.version}  • DB Version #{env.app.db_version}
+				span.pull-right &copy; #{env.app.footer.company} #{env.app.footer.year} &nbsp;
+//script(src='/jquery/jquery.min.js')
 script(src='/bootstrap/js/bootstrap.min.js')
-script(src='/js/sidebar_menu.js')
+script(src='/public/js/sidebar_menu.js')
 
 block footer
